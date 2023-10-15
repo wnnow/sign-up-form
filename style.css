@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+:root {
+  --color-valid-text: rgb(139, 195, 74);
+  --color-valid-background: #e2f0d2;
+  --color-invalid-text: rgba(185, 35, 38, 0.25);
+  --color-invalid-background: rgb(224, 178, 178);
+  --color-primary: #e59700;
+  --color-grey-background: #e5e7eb;
+  --color-input-border: #abadb1;
+}
+
 html {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -27,6 +37,10 @@ button {
   padding: 0;
   margin: 0;
   /* box-sizing: border-box; */
+}
+input,
+textarea {
+  outline: none;
 }
 
 .container {
@@ -86,7 +100,7 @@ button {
 }
 
 .header-container {
-  background-color: #e5e7eb;
+  background-color: var(--color-grey-background);
   flex: auto;
   display: flex;
   flex-direction: column;
@@ -133,31 +147,54 @@ button {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 24px;
   /* padding-right: 16px; */
+  position: relative;
 }
 
 .sign-up-input-container input {
   border-radius: 5px;
-  border: 1px solid #abadb1;
+  border: 1px solid var(--color-input-border);
   padding: 4px;
 }
 
 .sign-up-input-container input:focus {
-  border: 1px solid #e59700;
+  border: 1px solid var(--color-primary);
+  background-color: rgb(248, 248, 248);
+}
+
+.sign-up-input-container input:focus:valid {
+  border: 1px solid var(--color-valid-text);
+}
+.sign-up-input-container input:focus:invalid {
+  border: 1px solid var(--color-invalid-text);
 }
 
 .sign-up-input-container input:valid {
-  border: 1px solid rgb(163, 228, 163);
+  border: 1px solid var(--color-valid-text);
+  background-color: var(--color-valid-background);
 }
 .sign-up-input-container input:invalid {
-  border: 1px solid lightpink;
+  border: 1px solid var(--color-invalid-text);
+  background-color: var(--color-invalid-background);
+}
+
+.sign-up-input-container input:placeholder-shown {
+  background-color: white;
+  border: 1px solid var(--color-input-border);
+}
+
+.label-pass::after {
+  content: "*Password must contain";
+  position: absolute;
+  right: 1px;
+  color: var(--color-invalid-text);
 }
 
 /* create account button section */
 
 .create-account-button-section {
-  background-color: #e5e7eb;
+  background-color: var(--color-grey-background);
   height: auto;
   padding: 16px;
   display: flex;
@@ -168,9 +205,9 @@ button {
 
 .create-account-button-section button {
   padding: 16px 0;
-  background-color: #e59700;
+  background-color: var(--color-primary);
   border-radius: 5px;
-  border: 2px solid #e59700;
+  border: 2px solid var(--color-primary);
   color: #e5e7eb;
   font-weight: bold;
 }
