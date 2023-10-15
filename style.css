@@ -3,7 +3,7 @@
 :root {
   --color-valid-text: rgb(139, 195, 74);
   --color-valid-background: #e2f0d2;
-  --color-invalid-text: rgba(185, 35, 38, 0.25);
+  --color-invalid-text: rgba(185, 35, 38);
   --color-invalid-background: rgb(224, 178, 178);
   --color-primary: #e59700;
   --color-grey-background: #e5e7eb;
@@ -184,10 +184,16 @@ textarea {
   border: 1px solid var(--color-input-border);
 }
 
-.label-pass::after {
-  content: "*Password must contain";
+.confirm-pass-invalid {
+  border: 1px solid var(--color-invalid-text) !important;
+  background-color: var(--color-invalid-background) !important;
+}
+
+.label-confirm-pass::after {
+  content: "*Password do not match";
   position: absolute;
-  right: 1px;
+  bottom: -30px;
+  left: 0;
   color: var(--color-invalid-text);
 }
 
