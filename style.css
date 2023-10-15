@@ -147,12 +147,12 @@ button {
   border: 1px solid #e59700;
 }
 
-/* .sign-up-input-container input:valid {
-  border: 1px solid rgb(192, 230, 192);
+.sign-up-input-container input:valid {
+  border: 1px solid rgb(163, 228, 163);
 }
 .sign-up-input-container input:invalid {
   border: 1px solid lightpink;
-} */
+}
 
 /* create account button section */
 
@@ -193,6 +193,7 @@ button {
     background-image: url(./images/vertical.jpg);
     background-size: cover;
     position: relative;
+    min-width: 350px;
   }
 
   .logo-container {
@@ -217,11 +218,24 @@ button {
   .form-container {
     padding-left: 50px;
     justify-content: center;
-    flex: 2;
+    flex: 1;
+  }
+
+  .form-container fieldset {
+    display: flex;
+    column-gap: 64px;
+    row-gap: 16px;
+    flex-wrap: wrap;
+    max-width: 750px;
+  }
+
+  .sign-up-input-container {
+    width: 300px;
   }
 
   .create-account-button-section {
     padding-left: 50px;
+    padding-top: 50px;
     flex: 1;
   }
   .create-account-button-section button {
