@@ -31,7 +31,7 @@ button {
   height: 100vh;
   width: 100vw;
 }
-
+/* logo section */
 .logo-section {
   background-image: url(./images/landscape.jpg);
   background-size: cover;
@@ -40,6 +40,8 @@ button {
   align-items: center;
   flex: 1;
   position: relative;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .logo-container {
@@ -61,6 +63,7 @@ button {
 
 .logo-img {
   height: 100px;
+  padding: 8px;
 }
 
 .logo-font {
@@ -68,8 +71,64 @@ button {
   color: white;
 }
 
+/* Content section */
+
 .content-container {
   flex: 5;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container {
+  background-color: #e5e7eb;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #1f2937;
+  padding: 16px;
+}
+
+.header-container h1,
+.header-container div {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.invite-phase {
+  margin-top: 16px;
+}
+/* form section */
+
+.form-container {
+  flex: 2;
+  padding: 16px;
+}
+
+.form-container > form > fieldset {
+  border: 0 none;
+}
+
+.form-container > form > fieldset > legend {
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+.sign-up-input-container {
+}
+
+/* create account button section */
+
+.create-account-button-section {
+  background-color: #e5e7eb;
+  flex: 1;
+  padding: 16px;
 }
 
 /* @media screen and (min-width: 700px) {

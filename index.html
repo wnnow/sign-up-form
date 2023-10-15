@@ -21,13 +21,18 @@
             This is not a real online service! You know you need something like
             this in your life to help you realize your deepest dreams.
           </h1>
-          <div>Sign up <em>now</em> to get started.</div>
+          <div class="">
+            Sign up <span class="italic">now</span> to get started.
+          </div>
+          <div class="invite-phase">
+            You <span class="italic">know</span> you want too.
+          </div>
         </div>
         <div class="form-container">
-          <form>
+          <form action="https://httpbin.org/post" method="post" id="sign-up">
             <fieldset>
               <legend>Let's do this!</legend>
-              <div>
+              <div class="sign-up-input-container">
                 <label for="first-name">FIRST NAME</label>
                 <input
                   type="text"
@@ -37,7 +42,7 @@
                   required
                 />
               </div>
-              <div>
+              <div class="sign-up-input-container">
                 <label for="last-name">LAST NAME</label>
                 <input
                   type="text"
@@ -47,7 +52,7 @@
                   required
                 />
               </div>
-              <div>
+              <div class="sign-up-input-container">
                 <label for="email">EMAIL</label>
                 <input
                   type="email"
@@ -57,7 +62,7 @@
                   required
                 />
               </div>
-              <div>
+              <div class="sign-up-input-container">
                 <label for="phone-number">PHONE NUMBER</label>
                 <input
                   type="tel"
@@ -68,11 +73,11 @@
                   required
                 />
               </div>
-              <div>
+              <div class="sign-up-input-container">
                 <label for="pass">PASSWORD</label>
                 <input type="password" id="pass" name="pass" required />
               </div>
-              <div>
+              <div class="sign-up-input-container">
                 <label for="confirm-pass">PASSWORD</label>
                 <input
                   type="password"
@@ -82,9 +87,12 @@
                 />
               </div>
             </fieldset>
-            <button type="submit">Create Account</button>
           </form>
+        </div>
+        <div class="create-account-button-section">
+          <button type="submit" form="sign-up">Create Account</button>
           <div>Already have an account? <a href="#">Log in</a></div>
+          yi
         </div>
       </div>
     </div>
