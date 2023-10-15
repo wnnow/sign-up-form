@@ -147,7 +147,7 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   /* padding-right: 16px; */
   position: relative;
 }
@@ -189,10 +189,21 @@ textarea {
   background-color: var(--color-invalid-background) !important;
 }
 
+.sign-up-input-container .error-message {
+  display: none;
+  position: absolute;
+  font-size: 1rem;
+  right: 0;
+  color: var(--color-invalid-text);
+}
+input#pass:focus:invalid + .error-message {
+  display: block;
+}
+
 .label-confirm-pass::after {
   content: "*Password do not match";
   position: absolute;
-  bottom: -30px;
+  bottom: -25px;
   left: 0;
   color: var(--color-invalid-text);
 }
@@ -253,7 +264,6 @@ textarea {
   }
 
   .header-container {
-    padding-top: 100px;
     padding-left: 50px;
     flex: 1;
   }
@@ -274,6 +284,11 @@ textarea {
 
   .sign-up-input-container {
     width: 300px;
+    margin-bottom: 0;
+  }
+
+  .sign-up-input-container:last-child {
+    margin-bottom: 24px;
   }
 
   .create-account-button-section {
