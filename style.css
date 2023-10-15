@@ -87,7 +87,7 @@ button {
 
 .header-container {
   background-color: #e5e7eb;
-  flex: 1;
+  flex: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,11 +112,11 @@ button {
 /* form section */
 
 .form-container {
-  flex: 2;
+  flex: auto;
   padding: 16px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .form-container > form > fieldset {
@@ -158,15 +158,15 @@ button {
 
 .create-account-button-section {
   background-color: #e5e7eb;
-  flex: 1;
+  height: auto;
   padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  flex: auto;
 }
 
 .create-account-button-section button {
-  /* width: 150px; */
   padding: 16px 0;
   background-color: #e59700;
   border-radius: 5px;
@@ -181,25 +181,50 @@ button {
 }
 
 /* Desktop */
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 900px) {
   .container {
-    display: flex;
+    flex-direction: row;
+    max-width: 1920px;
   }
 
-  .logo-container {
-    height: 100vh;
+  .logo-section {
+    flex: auto;
+    width: 200px;
+    background-image: url(./images/vertical.jpg);
     background-size: cover;
-    flex: 1;
+    position: relative;
   }
 
   .logo-container {
-    display: flex;
+    position: absolute;
+    width: 100%;
+    top: 20%;
   }
 
   .logo-container img {
-    height: 15%;
+    height: 150px;
   }
   .content-container {
+    flex: 3;
+  }
+
+  .header-container {
+    padding-top: 100px;
+    padding-left: 50px;
+    flex: 1;
+  }
+
+  .form-container {
+    padding-left: 50px;
+    justify-content: center;
     flex: 2;
+  }
+
+  .create-account-button-section {
+    padding-left: 50px;
+    flex: 1;
+  }
+  .create-account-button-section button {
+    width: 250px;
   }
 }
